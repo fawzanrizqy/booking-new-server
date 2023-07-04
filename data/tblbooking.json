@@ -1,0 +1,22 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'dbbooking'
+
+// dbbooking.tblbooking
+
+[
+  {
+    "id_booking": "1",
+    "tgl_booking": "2023-07-04",
+    "nama_booking": "ojan",
+    "shift_mulai": "02:00:00",
+    "shift_selesai": "05:00:00",
+    "id_ruang": "1",
+    "keperluan": "adasdasd",
+    "status": "active",
+    "alasan": "asdsad"
+  }
+]
