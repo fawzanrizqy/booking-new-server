@@ -1,10 +1,125 @@
-/**
- Export to JSON plugin for PHPMyAdmin
- @version 0.1
- */
-
-// Database 'dbbooking'
-
-// dbbooking.tblruang
-
-[{"ruang_id":"1","nama_ruang":"I-1","gedung":"I","kapasitas":"22"}, {"ruang_id":"2","nama_ruang":"I-2","gedung":"I","kapasitas":"22"}, {"ruang_id":"3","nama_ruang":"I-3","gedung":"I","kapasitas":"22"}, {"ruang_id":"4","nama_ruang":"I-4","gedung":"I","kapasitas":"22"}, {"ruang_id":"5","nama_ruang":"I-5","gedung":"I","kapasitas":"10"}, {"ruang_id":"6","nama_ruang":"I-5A","gedung":"I","kapasitas":"10"}, {"ruang_id":"7","nama_ruang":"I-6","gedung":"I","kapasitas":"30"}, {"ruang_id":"8","nama_ruang":"J 1 ","gedung":"J","kapasitas":"40"}, {"ruang_id":"9","nama_ruang":"J 2","gedung":"J","kapasitas":"40"}, {"ruang_id":"10","nama_ruang":"J 3","gedung":"J","kapasitas":"40"}, {"ruang_id":"11","nama_ruang":"SMARTCLASS","gedung":"J","kapasitas":"50"}, {"ruang_id":"12","nama_ruang":"K-1","gedung":"K","kapasitas":"42"}, {"ruang_id":"13","nama_ruang":"K-2","gedung":"K","kapasitas":"42"}, {"ruang_id":"14","nama_ruang":"K-3","gedung":"K","kapasitas":"42"}, {"ruang_id":"15","nama_ruang":"K-4","gedung":"K","kapasitas":"42"}, {"ruang_id":"16","nama_ruang":"K-5","gedung":"K","kapasitas":"42"}, {"ruang_id":"17","nama_ruang":"K-6","gedung":"K","kapasitas":"42"}, {"ruang_id":"18","nama_ruang":"L-1","gedung":"L","kapasitas":"42"}, {"ruang_id":"19","nama_ruang":"L-2","gedung":"L","kapasitas":"42"}, {"ruang_id":"20","nama_ruang":"L-3","gedung":"L","kapasitas":"35"}, {"ruang_id":"21","nama_ruang":"L-4","gedung":"L","kapasitas":"35"}, {"ruang_id":"22","nama_ruang":"L-5","gedung":"L","kapasitas":"42"}, {"ruang_id":"23","nama_ruang":"L-6","gedung":"L","kapasitas":"42"}, {"ruang_id":"24","nama_ruang":"M1-1","gedung":"M","kapasitas":"42"}, {"ruang_id":"25","nama_ruang":"M1-2","gedung":"M","kapasitas":"42"}, {"ruang_id":"26","nama_ruang":"M1-3","gedung":"M","kapasitas":"42"}, {"ruang_id":"27","nama_ruang":"M1-4","gedung":"M","kapasitas":"42"}, {"ruang_id":"28","nama_ruang":"M1-5","gedung":"M","kapasitas":"42"}, {"ruang_id":"29","nama_ruang":"M1-6","gedung":"M","kapasitas":"55"}, {"ruang_id":"30","nama_ruang":"M1-7","gedung":"M","kapasitas":"55"}, {"ruang_id":"31","nama_ruang":"M1-8","gedung":"M","kapasitas":"55"}, {"ruang_id":"32","nama_ruang":"M2-1","gedung":"M","kapasitas":"35"}, {"ruang_id":"33","nama_ruang":"M2-2","gedung":"M","kapasitas":"35"}, {"ruang_id":"34","nama_ruang":"M2-3","gedung":"M","kapasitas":"35"}, {"ruang_id":"35","nama_ruang":"M2-4","gedung":"M","kapasitas":"35"}, {"ruang_id":"36","nama_ruang":"M2-5","gedung":"M","kapasitas":"35"}, {"ruang_id":"37","nama_ruang":"M2-6","gedung":"M","kapasitas":"45"}, {"ruang_id":"38","nama_ruang":"M2-7","gedung":"M","kapasitas":"45"}, {"ruang_id":"39","nama_ruang":"M2-8","gedung":"M","kapasitas":"45"}, {"ruang_id":"40","nama_ruang":"M3.4","gedung":"M","kapasitas":"30"}, {"ruang_id":"41","nama_ruang":"M3-1","gedung":"M","kapasitas":"30"}, {"ruang_id":"42","nama_ruang":"M3-2","gedung":"M","kapasitas":"30"}, {"ruang_id":"43","nama_ruang":"M3-2.A","gedung":"M","kapasitas":"30"}, {"ruang_id":"44","nama_ruang":"M3-2.B","gedung":"M","kapasitas":"30"}, {"ruang_id":"45","nama_ruang":"M3-3","gedung":"M","kapasitas":"30"}, {"ruang_id":"46","nama_ruang":"M3-4","gedung":"M","kapasitas":"30"}, {"ruang_id":"47","nama_ruang":"M3-5","gedung":"M","kapasitas":"30"}, {"ruang_id":"48","nama_ruang":"M3-6","gedung":"M","kapasitas":"30"}, {"ruang_id":"49","nama_ruang":"A","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"50","nama_ruang":"B","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"51","nama_ruang":"C","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"52","nama_ruang":"D","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"53","nama_ruang":"E","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"54","nama_ruang":"F","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"55","nama_ruang":"G-1","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"56","nama_ruang":"G-2","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"57","nama_ruang":"H","gedung":"GEDUNG LAMA","kapasitas":"40"}, {"ruang_id":"58","nama_ruang":"PADEPOKAN","gedung":"PADEPOKAN","kapasitas":"80"}]
+[
+  { "ruang_id": "1", "nama_ruang": "I-1", "gedung": "I", "kapasitas": "22" },
+  { "ruang_id": "2", "nama_ruang": "I-2", "gedung": "I", "kapasitas": "22" },
+  { "ruang_id": "3", "nama_ruang": "I-3", "gedung": "I", "kapasitas": "22" },
+  { "ruang_id": "4", "nama_ruang": "I-4", "gedung": "I", "kapasitas": "22" },
+  { "ruang_id": "5", "nama_ruang": "I-5", "gedung": "I", "kapasitas": "10" },
+  { "ruang_id": "6", "nama_ruang": "I-5A", "gedung": "I", "kapasitas": "10" },
+  { "ruang_id": "7", "nama_ruang": "I-6", "gedung": "I", "kapasitas": "30" },
+  { "ruang_id": "8", "nama_ruang": "J 1 ", "gedung": "J", "kapasitas": "40" },
+  { "ruang_id": "9", "nama_ruang": "J 2", "gedung": "J", "kapasitas": "40" },
+  { "ruang_id": "10", "nama_ruang": "J 3", "gedung": "J", "kapasitas": "40" },
+  {
+    "ruang_id": "11",
+    "nama_ruang": "SMARTCLASS",
+    "gedung": "J",
+    "kapasitas": "50"
+  },
+  { "ruang_id": "12", "nama_ruang": "K-1", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "13", "nama_ruang": "K-2", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "14", "nama_ruang": "K-3", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "15", "nama_ruang": "K-4", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "16", "nama_ruang": "K-5", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "17", "nama_ruang": "K-6", "gedung": "K", "kapasitas": "42" },
+  { "ruang_id": "18", "nama_ruang": "L-1", "gedung": "L", "kapasitas": "42" },
+  { "ruang_id": "19", "nama_ruang": "L-2", "gedung": "L", "kapasitas": "42" },
+  { "ruang_id": "20", "nama_ruang": "L-3", "gedung": "L", "kapasitas": "35" },
+  { "ruang_id": "21", "nama_ruang": "L-4", "gedung": "L", "kapasitas": "35" },
+  { "ruang_id": "22", "nama_ruang": "L-5", "gedung": "L", "kapasitas": "42" },
+  { "ruang_id": "23", "nama_ruang": "L-6", "gedung": "L", "kapasitas": "42" },
+  { "ruang_id": "24", "nama_ruang": "M1-1", "gedung": "M", "kapasitas": "42" },
+  { "ruang_id": "25", "nama_ruang": "M1-2", "gedung": "M", "kapasitas": "42" },
+  { "ruang_id": "26", "nama_ruang": "M1-3", "gedung": "M", "kapasitas": "42" },
+  { "ruang_id": "27", "nama_ruang": "M1-4", "gedung": "M", "kapasitas": "42" },
+  { "ruang_id": "28", "nama_ruang": "M1-5", "gedung": "M", "kapasitas": "42" },
+  { "ruang_id": "29", "nama_ruang": "M1-6", "gedung": "M", "kapasitas": "55" },
+  { "ruang_id": "30", "nama_ruang": "M1-7", "gedung": "M", "kapasitas": "55" },
+  { "ruang_id": "31", "nama_ruang": "M1-8", "gedung": "M", "kapasitas": "55" },
+  { "ruang_id": "32", "nama_ruang": "M2-1", "gedung": "M", "kapasitas": "35" },
+  { "ruang_id": "33", "nama_ruang": "M2-2", "gedung": "M", "kapasitas": "35" },
+  { "ruang_id": "34", "nama_ruang": "M2-3", "gedung": "M", "kapasitas": "35" },
+  { "ruang_id": "35", "nama_ruang": "M2-4", "gedung": "M", "kapasitas": "35" },
+  { "ruang_id": "36", "nama_ruang": "M2-5", "gedung": "M", "kapasitas": "35" },
+  { "ruang_id": "37", "nama_ruang": "M2-6", "gedung": "M", "kapasitas": "45" },
+  { "ruang_id": "38", "nama_ruang": "M2-7", "gedung": "M", "kapasitas": "45" },
+  { "ruang_id": "39", "nama_ruang": "M2-8", "gedung": "M", "kapasitas": "45" },
+  { "ruang_id": "40", "nama_ruang": "M3.4", "gedung": "M", "kapasitas": "30" },
+  { "ruang_id": "41", "nama_ruang": "M3-1", "gedung": "M", "kapasitas": "30" },
+  { "ruang_id": "42", "nama_ruang": "M3-2", "gedung": "M", "kapasitas": "30" },
+  {
+    "ruang_id": "43",
+    "nama_ruang": "M3-2.A",
+    "gedung": "M",
+    "kapasitas": "30"
+  },
+  {
+    "ruang_id": "44",
+    "nama_ruang": "M3-2.B",
+    "gedung": "M",
+    "kapasitas": "30"
+  },
+  { "ruang_id": "45", "nama_ruang": "M3-3", "gedung": "M", "kapasitas": "30" },
+  { "ruang_id": "46", "nama_ruang": "M3-4", "gedung": "M", "kapasitas": "30" },
+  { "ruang_id": "47", "nama_ruang": "M3-5", "gedung": "M", "kapasitas": "30" },
+  { "ruang_id": "48", "nama_ruang": "M3-6", "gedung": "M", "kapasitas": "30" },
+  {
+    "ruang_id": "49",
+    "nama_ruang": "A",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "50",
+    "nama_ruang": "B",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "51",
+    "nama_ruang": "C",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "52",
+    "nama_ruang": "D",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "53",
+    "nama_ruang": "E",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "54",
+    "nama_ruang": "F",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "55",
+    "nama_ruang": "G-1",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "56",
+    "nama_ruang": "G-2",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "57",
+    "nama_ruang": "H",
+    "gedung": "GEDUNG LAMA",
+    "kapasitas": "40"
+  },
+  {
+    "ruang_id": "58",
+    "nama_ruang": "PADEPOKAN",
+    "gedung": "PADEPOKAN",
+    "kapasitas": "80"
+  }
+]
