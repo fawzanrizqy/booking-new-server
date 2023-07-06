@@ -39,7 +39,7 @@ class Controller {
         }
     }
 
-    static async Book(req, res, next) {
+    static async book(req, res, next) {
         try {
 
         } catch (err) {
@@ -49,6 +49,18 @@ class Controller {
 
     static async getGedung(req, res, next) {
         try {
+            const ruang = await Ruang.findAll({
+                attributes: ['gedung'],
+                group: ['gedung']
+            })
+
+            const gedung = [];
+
+            for (let i = 0; i < ruang.length; i++) {
+                gedung.push(ruang[i].gedung);
+            }
+
+            res.status(200).json({ gedung });
 
         } catch (err) {
             next(err);
@@ -57,7 +69,14 @@ class Controller {
 
     static async getRuang(req, res, next) {
         try {
+            const gedung = req.params.id;
 
+            const ruang = await Ruang.findAll({
+                where: { gedung },
+                attributes: ['nama_ruang', 'kapasitas'],
+            })
+
+            res.status(200).json({ ruang });
         } catch (err) {
             next(err);
         }

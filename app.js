@@ -18,8 +18,8 @@ app.use(express.json());
 // *route:
 app.post('/register', Controller.register)
 app.post('/login', Controller.login)
-app.use(authUser);
-app.post('/book', Controller.book)
+// app.use(authUser);
+// app.post('/book', Controller.book)
 app.get('/gedung', Controller.getGedung)
 app.get('/ruang/:id', Controller.getRuang)
 app.use(errorHandler);
