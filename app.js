@@ -18,10 +18,14 @@ app.use(express.json());
 // *route:
 app.post('/register', Controller.register)
 app.post('/login', Controller.login)
-// app.use(authUser);
-// app.post('/book', Controller.book)
+app.use(authUser);
+app.post('/booking', Controller.book)
 app.get('/gedung', Controller.getGedung)
 app.get('/ruang/:id', Controller.getRuang)
+app.get('/get-list', Controller.getList);
+app.get('/get-list-processed', Controller.getListAll);
+app.post('/get-book', Controller.getBook);
+app.patch('/update-book', Controller.updateBook);
 app.use(errorHandler);
 
 app.listen(port, () => {

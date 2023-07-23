@@ -28,7 +28,13 @@ module.exports = {
         type: Sequelize.TIME
       },
       id_ruang: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Ruangs',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       keperluan: {
         type: Sequelize.STRING
