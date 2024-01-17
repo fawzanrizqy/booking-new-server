@@ -48,6 +48,9 @@ class Controller {
         try {
             const { tgl_booking, time, alasan, id_ruang } = req.body;
             const { id } = req.user;
+
+            //validasi
+
             //! type status: pending, approved, rejected
             const booking = await Booking.create({ tgl_booking, nama_booking: +id, shift_mulai: time[0], shift_selesai: time[1], keperluan: alasan, id_ruang, status: "pending" });
 
