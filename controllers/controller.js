@@ -49,7 +49,52 @@ class Controller {
             const { tgl_booking, time, alasan, id_ruang } = req.body;
             const { id } = req.user;
 
-            //validasi
+            console.log(tgl_booking)
+
+
+            // Validasi
+            const existingBooking = await Booking.findOne({
+                where: {
+                    id_ruang: id_ruang,
+                    tgl_booking: new Date(tgl_booking), // Ensure that the date is the same
+                    [Op.or]: [
+                        {
+                            shift_mulai: {
+                                [Op.between]: [time[0], time[1]],
+                            },
+                        },
+                        {
+                            shift_selesai: {
+                                [Op.between]: [time[0], time[1]],
+                            },
+                        },
+                        {
+                            [Op.and]: [
+                                { shift_mulai: { [Op.lte]: time[0] } },
+                                { shift_selesai: { [Op.gte]: time[1] } },
+                            ],
+                        },
+                        {
+                            shift_mulai: {
+                                [Op.gte]: time[0],
+                                [Op.lte]: time[1],
+                            },
+                        },
+                        {
+                            shift_selesai: {
+                                [Op.gte]: time[0],
+                                [Op.lte]: time[1],
+                            },
+                        },
+                    ],
+                },
+            });
+
+            console.log(existingBooking);
+
+            if (existingBooking) {
+                throw { name: "validation_error", message: "Time slot and room already booked", code: 400 }
+            }
 
             //! type status: pending, approved, rejected
             const booking = await Booking.create({ tgl_booking, nama_booking: +id, shift_mulai: time[0], shift_selesai: time[1], keperluan: alasan, id_ruang, status: "pending" });
